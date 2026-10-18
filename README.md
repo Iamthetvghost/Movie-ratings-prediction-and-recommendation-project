@@ -62,7 +62,11 @@ Recommendation results are evaluated qualitatively by testing different combinat
 
 ## Visualisation
 
-The notebook includes visualisations to help interpret model performance and learned movie representations. The figures are chosen according to their purpose, such as comparing prediction errors or examining the latent factors learned by SVD.
+The Jupyter notebook in the notebook/ directory includes visualisations to help interpret model performance and learned movie representations. The figures are chosen according to their purpose, such as comparing prediction errors or examining the latent factors learned by SVD. The other Python file in the notebook/ directory contains the code used to generate the files required by the web application.
+
+The repository also includes a small interactive web application in the `website/` directory. The application allows users to enter three movie titles and receive ten recommendations based on cosine similarity between SVD-learned movie latent factors. It uses the pre-trained movie vectors exported from the notebook, so the model does not need to be retrained when the application runs.
+
+The application is deployed online and can be accessed here: **[Film Affinity](https://cghostmovie-movies-recommendation.streamlit.app/)**.
 
 ## Reproducibility
 
