@@ -175,7 +175,7 @@ st.markdown(
     '<div class="film-label">CLOCKGHOST / FILM ENGINE / 001</div>',
     unsafe_allow_html=True
 )
-st.title("cinema / affinity")
+st.title("film / affinity")
 st.write(
     "Enter three films. Discover the connections between them."
 )
