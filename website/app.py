@@ -175,12 +175,19 @@ st.markdown(
     '<div class="film-label">CLOCKGHOST / FILM ENGINE / 001</div>',
     unsafe_allow_html=True
 )
-
-st.title("film / affinity")
-
+st.title("cinema / affinity")
 st.write(
     "Enter three films. Discover the connections between them."
 )
+
+st.markdown("""
+<div style="font-size: 0.72rem; color: #888; line-height: 1.6; margin-top: -0.3rem; margin-bottom: 1.2rem;">
+    <p>If a title begins with an article, move it to the end after a comma
+    (e.g. <i>The Matrix</i> → <i>Matrix, The</i>).</p>
+    <p>Start without the release year. If multiple matches appear, add a space
+    followed by the year (e.g. <i>Crash (1996)</i>).</p>
+</div>
+""", unsafe_allow_html=True)
 
 st.divider()
 
@@ -192,15 +199,15 @@ with st.form("film_input"):
 
     film_1 = st.text_input(
         "Film 01",
-        placeholder="e.g. Mulholland Drive (2001)"
+        placeholder="e.g. Mulholland Drive"
     )
     film_2 = st.text_input(
         "Film 02",
-        placeholder="e.g. Cure (1997)"
+        placeholder="e.g. Meshes of the Afternoon"
     )
     film_3 = st.text_input(
         "Film 03",
-        placeholder="e.g. The Master (2012)"
+        placeholder="e.g. Shining, The"
     )
 
     submitted = st.form_submit_button(
