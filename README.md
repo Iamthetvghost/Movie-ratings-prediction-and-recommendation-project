@@ -62,11 +62,35 @@ Recommendation results are evaluated qualitatively by testing different combinat
 
 ## Visualisation
 
-The Jupyter notebook in the notebook/ directory includes visualisations to help interpret model performance and learned movie representations. The figures are chosen according to their purpose, such as comparing prediction errors or examining the latent factors learned by SVD. The other Python file in the notebook/ directory contains the code used to generate the files required by the web application.
+The visualisations follow a consistent and minimalist style, with clear titles, labels, and legends to make the results easy to read and compare. A restrained colour palette is used to distinguish different models, variables, and groups while avoiding unnecessary visual complexity.
+
+Different visualisation types are selected according to the purpose of each analysis. Heatmaps are used to display patterns in genre preferences, while tables and comparison plots are used to present model performance. Movie posters and titles are used to make recommendation results easier to recognise and compare.
+
+The Jupyter notebook in the `notebook/` directory includes visualisations to help interpret model performance and learned movie representations. The figures are chosen according to their purpose, such as comparing prediction errors or examining the latent factors learned by SVD. The other Python file in the `notebook/` directory contains the code used to generate the files required by the web application.
 
 The repository also includes a small interactive web application in the `website/` directory. The application allows users to enter three movie titles and receive ten recommendations based on cosine similarity between SVD-learned movie latent factors. It uses the pre-trained movie vectors exported from the notebook, so the model does not need to be retrained when the application runs.
 
 The application is deployed online and can be accessed here: **[Film Affinity](https://cghostmovie-movies-recommendation.streamlit.app/)**.
+
+## FAIR Principles
+
+The project considers the four FAIR principles: Findable, Accessible, Interoperable, and Reusable.
+
+### Findable
+
+The repository has a descriptive title and a README that clearly explains the project's purpose, research questions, methods, and structure. This helps users identify the project and understand its contents. The MovieLens dataset is linked to its official source, and its associated publication is provided so that users can identify and locate the original dataset.
+
+### Accessible
+
+The source code and project documentation are available through the repository. The dataset can be obtained separately from the official GroupLens website. The interactive application is also deployed online, allowing users to access the recommendation system without running the notebook locally.
+
+### Interoperable
+
+The project uses commonly adopted tools and formats, including Python, Jupyter Notebook, CSV files, and standard Python libraries. These make the data and code easier to work with in other Python-based environments and workflows.
+
+### Reusable
+
+The README provides information about the dataset, methods, dependencies, and steps required to reproduce the analysis. Random seeds are specified where applicable to support reproducibility. The original project code is released under the MIT License, allowing others to reuse and adapt it under the terms of that license. The MovieLens dataset remains subject to its own terms of use.
 
 ## Reproducibility
 
